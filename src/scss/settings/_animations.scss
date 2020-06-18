@@ -1,0 +1,16 @@
+@keyframes line--verticalSlide {
+  0% {
+    bottom: 80px;
+    height: 100%;
+  }
+
+  50% {
+    bottom: 0;
+    height: 100%;
+  }
+
+  100% {
+    bottom: 0;
+    height: 0;
+  }
+}

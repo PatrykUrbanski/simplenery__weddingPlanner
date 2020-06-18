@@ -1,0 +1,72 @@
+.about {
+  background: $mainBg;
+  height: 100%;
+  width: 100%;
+  color: black;
+  font-size: 2rem;
+  z-index: 1;
+
+  &__content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+      text-align: center;
+      margin: 20px;
+      @include tablet {
+        width: 50%;
+      }
+
+      &__title {
+        opacity: .4;
+        margin-bottom: 15px;
+
+      }
+
+      &__subtitle {
+        margin-bottom: 15px;
+        font-size: 3rem;
+        background: linear-gradient(90deg, rgba(169, 115, 109, 1), rgba(169, 115, 109, .4) );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      &__text {
+        line-height: 2.5rem;
+
+      }
+
+      &__link {
+        color: black;
+        text-decoration: none;
+        margin-top: 10px;
+        padding-bottom: 7px;
+        position: relative;
+        overflow: hidden;
+        &::after {
+          content: "";
+          height: 1px;
+          width: 150%;
+          background: linear-gradient(90deg, rgba(169, 115, 109, 1), rgba(255, 255, 255, .6));
+          position: absolute;
+          left: -10px;
+          bottom: 0;
+        }
+      }
+    }
+    &__image {
+      background-image: url("/images/aboutSec-1.jpg");
+      height: 400px;
+      width: 250px;
+      background-size: cover;
+    }
+  }
+}
