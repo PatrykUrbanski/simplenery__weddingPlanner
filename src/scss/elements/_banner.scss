@@ -4,9 +4,14 @@
   background-image: url("/images/bouguet-hero-dark.jpg");
   position: relative;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   z-index: 2;
+  opacity: 0;
+  animation: slideOpacity 1s ease-in-out;
+  animation-fill-mode: both;
+
   &::after {
     content: "";
     width: 100%;

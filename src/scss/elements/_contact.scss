@@ -1,0 +1,157 @@
+.contact {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  background-image: url("/images/bouquet-hero.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+  &::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .3);
+    z-index: 1;
+    @include tablet {
+      background: linear-gradient(90deg, rgba(169, 115, 109, .2), rgba(255, 255, 255, .1));
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+
+    &__wrap {
+      width: 80%;
+
+      @include tablet {
+        width: 40%;
+      }
+
+      &__headline {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .title {
+          text-align: center;
+          margin-bottom: 20px;
+          font-size: 5rem;
+          font-weight: 500;
+        }
+      }
+
+
+      &__form {
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        font-size: 2rem;
+        font-weight: 400;
+
+        .personalData {
+          display: flex;
+          justify-content: space-between;
+
+          label {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+            width: 45%;
+
+            input {
+              border: none;
+              border-bottom: 1px solid $mainText;
+              background: transparent;
+              color: $mainText;
+            }
+          }
+        }
+
+        .msg {
+          display: flex;
+          flex-direction: column;
+          margin-top: 30px;
+
+          textarea {
+            margin-top: 15px;
+            border: none;
+            border-bottom: 1px solid $mainText;
+            background: transparent;
+            height: 100px;
+            color: $mainText;
+          }
+        }
+
+        .sendFormBtn {
+          border: 1px solid $mainText;
+          text-transform: uppercase;
+          letter-spacing: 5px;
+          background: transparent;
+          width: 50%;
+          padding: 13px 30px;
+          font-size: 2rem;
+          transition: 1s;
+          align-self: center;
+          margin-top: 15px;
+          color: $mainText;
+          &:hover {
+            background: linear-gradient(90deg, rgba(169, 115, 109, 1), rgba(255, 255, 255, .6));
+
+          }
+        }
+      }
+    }
+
+    &__icons {
+      position: absolute;
+      bottom: 10px;
+      font-size: 30px;
+      left: calc(50% - 120px / 2);
+      z-index: 2;
+
+      i {
+        margin: 0 15px;
+      }
+    }
+  }
+}
+
+::placeholder {
+  color: $mainText;
+  font-size: 1.4rem;
+  opacity: .7;
+}
+
+.errorMsg {
+  font-size: 12px;
+  color: red;
+  margin-top: 8px;
+  display: none;
+}
+
+.successMsg {
+  font-size: 18px;
+  color: green;
+  margin-top: 8px;
+  display: none;
+
+}
+
+.active {
+  display: inline-block;
+}
+
