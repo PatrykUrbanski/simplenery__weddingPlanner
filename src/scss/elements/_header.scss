@@ -10,13 +10,43 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+
+    .logo {
+      height: 90px;
+      width: 90px;
+      color: $mainText;
+    }
+
+    &__menuIcon {
+      position: absolute;
+      right: 3vw;
+      top: 5vh;
+      z-index: 10;
+
+      &__elem {
+        height: 5px;
+        width: 40px;
+        background: $mainText;
+        display: block;
+        margin: 5px 0 5px 0;
+        transition: .3s ease-in-out;
+      }
+    }
 
     .menu {
+
 
       &__elem {
         text-decoration: none;
         color: $mainText;
-        margin-left: 15px;
+        margin-left: 30px;
+        padding: 8px;
+        border: 1px solid transparent;
+        transition: .3s;
+        &:hover {
+          border: 1px solid rgba(169, 115, 109, 1);
+        }
       }
     }
 

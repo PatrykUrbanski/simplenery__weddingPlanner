@@ -23,8 +23,6 @@ export const App = () => {
               <Contact />
               </>
           : <LoadingPage /> }
-
-
       </>
   )
 };
