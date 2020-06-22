@@ -25,7 +25,6 @@ export const About = () => {
                       </div>
                       <div className={"bgLine"}/>
                   </div>
-
                   <div className={"bgElem"}/>
                   <div className={"cardImageSection container"}>
                       <div className={"bgLine top"}/>

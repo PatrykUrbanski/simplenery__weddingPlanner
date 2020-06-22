@@ -4,6 +4,7 @@ import {About} from "./components/aboutSection/aboutSection";
 import {Header} from "./components/header/header";
 import {Contact} from "./components/contact/contact";
 import {LoadingPage} from "./components/loadingPage/loadingPage";
+import LazyLoad from 'react-lazyload';
 
 export const App = () => {
     const [loaded, setLoaded] = useState(false);
@@ -19,8 +20,12 @@ export const App = () => {
           {loaded ? <>
               <Header/>
               <Banner/>
-              <About />
-              <Contact />
+              <LazyLoad>
+                  <About />
+              </LazyLoad>
+              <LazyLoad offset={200}>
+                  <Contact />
+              </LazyLoad>
               </>
           : <LoadingPage /> }
       </>
