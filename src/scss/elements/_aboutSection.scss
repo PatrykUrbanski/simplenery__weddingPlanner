@@ -80,36 +80,8 @@
           line-height: 2.5rem;
 
         }
-
-        &__link {
-          align-self: center;
-          text-decoration: none;
-          font-weight: 500;
-          margin: 20px 0;
-          padding-bottom: 7px;
-          position: relative;
-          overflow: hidden;
-          transition: .7s;
-          background: linear-gradient(90deg, rgba(169, 115, 109, 1), rgba(169, 115, 109, .6) );
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-
-          &::after {
-            content: "";
-            height: 1px;
-            width: 0;
-            background: linear-gradient(90deg, rgba(169, 115, 109, 1), rgba(255, 255, 255, .6));
-            position: absolute;
-            left: -10px;
-            bottom: 0;
-            transition: 1.5s;
-          }
-          &:hover::after {
-            width: 150%;
-
-          }
-        }
       }
+
       .images {
         display: flex;
         flex-wrap: wrap;

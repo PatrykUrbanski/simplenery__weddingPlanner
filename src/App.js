@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import {Banner} from "./components/banner/banner";
-import {About} from "./components/mainSection/mainSection";
 import {Header} from "./components/header/header";
-import {Contact} from "./components/contact/contact";
 import {LoadingPage} from "./components/loadingPage/loadingPage";
-import LazyLoad from 'react-lazyload';
 import {OurStory} from "./components/storySection/storySection";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {LandingTemplate} from "./components/landingTemplate/landingTemplate";
+import {Contact} from "./components/contact/contact";
 
 export const App = () => {
     const [loaded, setLoaded] = useState(false);
@@ -18,19 +17,18 @@ export const App = () => {
 
   return (
       <>
-          <Header/>
-          <OurStory />
-          {/*{loaded ? <>*/}
-          {/*    <Header/>*/}
-          {/*    <Banner/>*/}
-          {/*    <LazyLoad once={true}>*/}
-          {/*        <About />*/}
-          {/*    </LazyLoad>*/}
-          {/*    <LazyLoad offset={200} once={true}>*/}
-          {/*        <Contact />*/}
-          {/*    </LazyLoad>*/}
-          {/*    </>*/}
-          {/*: <LoadingPage /> }*/}
+          {loaded ? <>
+              <BrowserRouter>
+              <Header/>
+                  <Switch>
+                      <Route exact path="/" component={LandingTemplate} />
+                      <Route path="/ourStory" component={OurStory} />
+                      {/*<Route path="/ourStory" component={OurStory} />*/}
+                      <Route path="/contact" component={Contact} />
+                  </Switch>
+              </BrowserRouter>
+              </>
+          : <LoadingPage /> }
       </>
   )
 };

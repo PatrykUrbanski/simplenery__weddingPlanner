@@ -15,6 +15,7 @@
     flex-direction: column;
     justify-content: center;
     background: url("/images/sunset.jpg");
+    background-attachment: fixed;
     background-size: cover;
     padding: 20px 0;
     position: relative;
@@ -48,10 +49,7 @@
       border-radius: 10%;
       z-index: 2;
     }
-
   }
-
-
 
   &__content {
     color: black;
@@ -59,7 +57,7 @@
 
     &__title {
       margin-top: 70px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       font-size: 5rem;
       @media (max-width: 330px) {
         font-size: 4rem;
@@ -75,6 +73,110 @@
       line-height: 2.5rem;
     }
 
+    &__card {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 80px 0;
+      font-style: italic;
+      position: relative;
+      @include tablet {
+        margin: 5px;
+        &:nth-of-type(1) {
+          margin-top: 70px;
+          .description {
+            position: relative;
+            align-self: center;
+          }
+        }
+
+        &:nth-of-type(2) {
+          .image {
+            width: 70%;
+          }
+          .description {
+            position: sticky;
+            align-self: flex-start;
+            top: 90px;
+          }
+        }
+
+        &:nth-of-type(3) {
+          .image {
+            width: 22%;
+          }
+          .description {
+            position: relative;
+            align-self: center;
+          }
+        }
+
+      }
+
+
+      .image {
+        width: 80%;
+        margin: 10px;
+        @include tablet {
+          width: calc(33.33% - 20px);
+        }
+      }
+
+      .deco {
+        position: absolute;
+        font-size: 12rem;
+       top: -120px;
+        z-index: -1;
+        color: rgba(169, 115, 109, .2);
+        transform: rotate(-15deg);
+        @include tablet {
+          display: none;
+        }
+      }
+
+      .description {
+        font-weight: 300;
+        font-size: 2rem;
+        padding: 10px;
+        color: black;
+        @include tablet {
+          font-size: 2.5rem;
+          font-weight: 500;
+          width: 25%;
+          line-height: 3.5rem;
+          padding: 20px;
+          background: $mainBg;
+          top: calc(50% - 145px / 2);
+          left: 0;
+          position: relative;
+          align-self: center;
+          &::after {
+            content: "";
+            height: calc(100% - 40px);
+            width: 10px;
+            background: rgba(169, 115, 109, 1);
+            position: absolute;
+            left: 5px;
+            top: 20px;
+          }
+        }
+      }
+
+      .bgLine {
+        height: 80px;
+        width: 2px;
+        background: linear-gradient(rgba(255, 255, 255, .6), rgba(169, 115, 109, 1));
+        position: absolute;
+        bottom: -70px;
+        left: calc(50% - 2px / 2);
+        overflow: hidden;
+        border-radius: 10%;
+        z-index: 2;
+        @include tablet {
+          display: none;
+        }
+      }
+    }
   }
 }
 
@@ -82,4 +184,11 @@
   font-style: italic;
   font-weight: 700;
   color: rgba(169, 115, 109, 1);
+}
+
+.tabletView {
+  display: none;
+  @include tablet {
+    display: inline-block;
+  }
 }

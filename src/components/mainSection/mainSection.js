@@ -8,7 +8,6 @@ export const About = () => {
         <>
           <section className={"about"}>
               <div className={"about__content"}>
-
                   <div className={"cardImageSection container"}>
                       <Reveal>
                       <div className={"card"}>

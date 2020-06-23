@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useMediaQuery} from 'react-responsive';
+import {Link} from "react-router-dom";
 
 export const Header = () => {
     const isMobile = useMediaQuery({query: "(max-device-width: 768px)"});
@@ -18,9 +19,6 @@ export const Header = () => {
 
 
 
-
-
-
     return (
         <>
             <header className={`header ${headerOnTop ? false : "markHeader"}`}>
@@ -34,10 +32,10 @@ export const Header = () => {
                     </div>
                     <div className={"menu"} style={{height: `${isMobile ? openMenu ? "100vh" : "0" : "auto"}`}}>
                         <div className={"bgLine"}/>
-                        <a className={"menu__elem"} href={"#"} onClick={handleOpenMenu}>Home</a>
-                        <a className={"menu__elem"} href={"#"} onClick={handleOpenMenu}>Our story</a>
-                        <a className={"menu__elem"} href={"#"} onClick={handleOpenMenu}>Our works</a>
-                        <a className={"menu__elem"} href={"#"} onClick={handleOpenMenu}>Contact us</a>
+                        <Link className={"menu__elem"} to={"/"} onClick={handleOpenMenu}>Home</Link>
+                        <Link className={"menu__elem"} to={"/ourStory"} onClick={handleOpenMenu}>Our story</Link>
+                        <Link className={"menu__elem"} to={"/ourWorks"} onClick={handleOpenMenu}>Our works</Link>
+                        <Link className={"menu__elem"} to={"/contact"} onClick={handleOpenMenu}>Contact us</Link>
                         <div className={"bgLine"}/>
                     </div>
                 </div>
