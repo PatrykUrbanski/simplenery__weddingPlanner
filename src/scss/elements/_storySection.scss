@@ -6,6 +6,9 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  opacity: 0;
+  animation: slideOpacity 1.5s ease-in-out;
+  animation-fill-mode: both;
 
   &__title {
     height: 60vh;
@@ -57,13 +60,34 @@
 
     &__title {
       margin-top: 70px;
-      margin-bottom: 20px;
       font-size: 5rem;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      color: rgba(169, 115, 109, 1);
       @media (max-width: 330px) {
         font-size: 4rem;
       }
       @include tablet {
         font-size: 7rem;
+      }
+
+      &__list {
+        .word {
+          display: none;
+          width: 300px;
+          color: black;
+
+          &.displayWord {
+            display:inline-block;
+            animation: wordCarouselOpacity 8s ease-in-out;
+            animation-fill-mode: both;
+          }
+        }
+
       }
     }
 
@@ -71,6 +95,7 @@
       font-size: 2rem;
       font-style: italic;
       line-height: 2.5rem;
+      margin: 50px 0;
     }
 
     &__card {
@@ -178,6 +203,10 @@
       }
     }
   }
+  .bottomInfo {
+    color: black;
+
+  }
 }
 
 .hlText {
@@ -192,3 +221,5 @@
     display: inline-block;
   }
 }
+
+

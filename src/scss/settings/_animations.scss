@@ -58,3 +58,22 @@
     transform: translate(-154px, 84px) scale(1);
   }
 }
+
+@keyframes wordCarouselOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+
+}

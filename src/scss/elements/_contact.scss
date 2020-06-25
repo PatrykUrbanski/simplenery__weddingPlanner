@@ -8,6 +8,9 @@
   background-size: cover;
   z-index: 1;
   overflow: hidden;
+  opacity: 0;
+  animation: slideOpacity 1.5s ease-in-out;
+  animation-fill-mode: both;
   &::before {
     content: "";
     height: 100%;
