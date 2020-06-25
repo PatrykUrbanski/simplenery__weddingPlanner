@@ -5,6 +5,7 @@ import {OurStory} from "./components/storySection/storySection";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import {LandingTemplate} from "./components/landingTemplate/landingTemplate";
 import {Contact} from "./components/contact/contact";
+import {ScrollToTop} from "./components/router/scrollToTop";
 
 export const App = () => {
     const [loaded, setLoaded] = useState(false);
@@ -19,7 +20,8 @@ export const App = () => {
       <>
           {loaded ? <>
               <BrowserRouter>
-              <Header/>
+                  <ScrollToTop />
+                  <Header/>
                   <Switch>
                       <Route exact path="/" component={LandingTemplate} />
                       <Route path="/ourStory" component={OurStory} />
