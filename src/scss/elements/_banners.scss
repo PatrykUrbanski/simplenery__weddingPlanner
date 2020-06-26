@@ -67,3 +67,46 @@
     }
   }
 }
+
+.bannerSection__title {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 20px 0;
+  position: relative;
+  font-size: 5rem;
+  letter-spacing: 5px;
+  @media (max-width: 330px) {
+    font-size: 4rem;
+  }
+  @include tablet {
+    font-size: 7rem;
+  }
+
+  .subtitle {
+    margin: 10px 0;
+    font-size: 2rem;
+    color: rgba(0, 0, 0, .4);
+    font-style: italic;
+    @include tablet {
+      font-size: 3rem;
+    }
+  }
+
+  .bgLine {
+    height: 140px;
+    width: 2px;
+    background: linear-gradient(rgba(255, 255, 255, .6), rgba(169, 115, 109, 1));
+    position: absolute;
+    bottom: -70px;
+    left: calc(50% - 2px / 2);
+    overflow: hidden;
+    border-radius: 10%;
+    z-index: 2;
+  }
+}

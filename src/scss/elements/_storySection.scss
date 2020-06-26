@@ -10,92 +10,18 @@
   animation: slideOpacity 1.5s ease-in-out;
   animation-fill-mode: both;
 
-  &__title {
-    height: 60vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    background: url("/images/sunset.jpg");
-    background-attachment: fixed;
-    background-size: cover;
-    padding: 20px 0;
-    position: relative;
-    font-size: 5rem;
-    letter-spacing: 5px;
-    @media (max-width: 330px) {
-      font-size: 4rem;
-    }
-    @include tablet {
-      font-size: 7rem;
-    }
-
-    .subtitle {
-      margin: 10px 0;
-      font-size: 2rem;
-      color: rgba(0, 0, 0, .4);
-      font-style: italic;
-      @include tablet {
-        font-size: 3rem;
-      }
-    }
-
-    .bgLine {
-      height: 140px;
-      width: 2px;
-      background: linear-gradient(rgba(255, 255, 255, .6), rgba(169, 115, 109, 1));
-      position: absolute;
-      bottom: -70px;
-      left: calc(50% - 2px / 2);
-      overflow: hidden;
-      border-radius: 10%;
-      z-index: 2;
-    }
-  }
-
   &__content {
     color: black;
     text-align: center;
 
-    &__title {
-      margin-top: 70px;
-      font-size: 5rem;
-      overflow: hidden;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      color: rgba(169, 115, 109, 1);
-      @media (max-width: 330px) {
-        font-size: 4rem;
-      }
-      @include tablet {
-        font-size: 7rem;
-      }
-
-      &__list {
-        .word {
-          display: none;
-          width: 300px;
-          color: black;
-
-          &.displayWord {
-            display:inline-block;
-            animation: wordCarouselOpacity 8s ease-in-out;
-            animation-fill-mode: both;
-          }
-        }
-
-      }
-    }
-
     &__text {
       font-size: 2rem;
       font-style: italic;
-      line-height: 2.5rem;
-      margin: 50px 0;
+      line-height: 3.5rem;
+      margin: 80px 0;
+      @include tablet {
+        font-size: 3rem;
+      }
     }
 
     &__card {
@@ -137,15 +63,15 @@
         }
 
       }
-
-
       .image {
         width: 80%;
         margin: 10px;
+        position: relative;
         @include tablet {
           width: calc(33.33% - 20px);
         }
       }
+
 
       .deco {
         position: absolute;
@@ -165,9 +91,8 @@
         padding: 10px;
         color: black;
         @include tablet {
-          font-size: 2.5rem;
+          font-size: 2rem;
           font-weight: 500;
-          width: 25%;
           line-height: 3.5rem;
           padding: 20px;
           background: $mainBg;
@@ -183,6 +108,10 @@
             position: absolute;
             left: 5px;
             top: 20px;
+          }
+          @include desktop {
+            font-size: 2.5rem;
+            width: 25%;
           }
         }
       }
