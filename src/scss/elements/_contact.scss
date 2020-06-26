@@ -1,16 +1,10 @@
 .contact {
-  position: relative;
   height: 100vh;
-  width: 100%;
   background-image: url("/images/bouquet-hero.webp");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   z-index: 1;
-  overflow: hidden;
-  opacity: 0;
-  animation: slideOpacity 1.5s ease-in-out;
-  animation-fill-mode: both;
   &::before {
     content: "";
     height: 100%;

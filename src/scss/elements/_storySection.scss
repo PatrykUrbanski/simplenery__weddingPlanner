@@ -1,15 +1,4 @@
 .story {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  opacity: 0;
-  animation: slideOpacity 1.5s ease-in-out;
-  animation-fill-mode: both;
-
   &__content {
     color: black;
     text-align: center;

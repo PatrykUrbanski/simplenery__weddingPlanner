@@ -75,5 +75,15 @@
   100% {
     opacity: 0;
   }
+}
 
+@keyframes bgText--slide {
+
+  0% {
+    right: -100%;
+  }
+
+  100% {
+    right: 150%;
+  }
 }

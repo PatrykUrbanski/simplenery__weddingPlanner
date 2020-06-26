@@ -6,7 +6,7 @@ export const OurStory = () => {
 
   return (
       <>
-          <section className={"story"} >
+          <section className={"mainSectionWrap story"} >
               <BannerSection title={"Our Story"} subtitle={"Let us inspire you"} bgImgPath={"/images/sunset.jpg"}/>
               <div className={"story__content container"}>
                   <blockquote className={"story__content__text"}>Lorem ipsum dolor sit amet, <span className={"hlText"}>consectetur</span> adipisicing elit. Ab culpa excepturi fugiat hic ipsa laudantium <span className={"hlText"}>pariatur</span> quam qui recusandae vero? Accusamus alias at expedita ipsum quae! Aperiam cum ea similique.</blockquote>

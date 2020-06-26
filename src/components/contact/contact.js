@@ -76,7 +76,7 @@ export const Contact = () => {
 
     return (
         <>
-            <section className={"contact"}>
+            <section className={"mainSectionWrap contact"}>
                 <div className={"contact__content container"}>
                     <div className={"contact__content__wrap"}>
                         <div className={"contact__content__wrap__headline"}>
