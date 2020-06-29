@@ -17,12 +17,12 @@
     .bgElem {
       width: 100%;
       height: 200px;
-      background-image: url("/images/bgElem-1.webp");
+      background-image: url("/images/bgElem-1.jpg");
       background-size: cover;
       background-attachment: fixed;
       margin: 100px 0;
       &.second {
-        background-image: url("/images/bgElem-2.webp");
+        background-image: url("/images/bgElem-2.jpg");
       }
     }
 
@@ -109,19 +109,19 @@
 
           }
           &.cutlery{
-            background-image: url("/images/aboutSec-1.webp");
+            background-image: url("/images/aboutSec-1.jpg");
           }
           &.candles {
-            background-image: url("/images/aboutSec-2.webp");
+            background-image: url("/images/aboutSec-2.jpg");
           }
           &.table {
-            background-image: url("/images/aboutSec-5.webp");
+            background-image: url("/images/aboutSec-5.jpg");
           }
           &.flowers {
-            background-image: url("/images/aboutSec-3.webp");
+            background-image: url("/images/aboutSec-3.jpg");
           }
           &.window {
-            background-image: url("/images/aboutSec-4.webp");
+            background-image: url("/images/aboutSec-4.jpg");
           }
         }
       }

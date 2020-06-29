@@ -7,6 +7,7 @@ import {LandingTemplate} from "./components/landingTemplate/landingTemplate";
 import {Contact} from "./components/contact/contact";
 import {ScrollToTop} from "./components/router/scrollToTop";
 import {OurWorks} from "./components/worksSection/worksSection";
+import {ProjectDetails} from "./components/worksSection/projectDetails";
 
 export const App = () => {
     const [loaded, setLoaded] = useState(false);
