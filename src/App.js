@@ -1,6 +1,5 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {Header} from "./components/header/header";
-import {LoadingPage} from "./components/loadingPage/loadingPage";
 import {OurStory} from "./components/storySection/storySection";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import {LandingTemplate} from "./components/landingTemplate/landingTemplate";
@@ -10,7 +9,7 @@ import {OurWorks} from "./components/worksSection/worksSection";
 
 export const App = () => {
   return (
-      <>
+      <>git
               <BrowserRouter>
                   <ScrollToTop />
                   <Header/>
