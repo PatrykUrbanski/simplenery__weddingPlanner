@@ -20,6 +20,7 @@ $column-base-width: 100% / $columns;
       }
     }
   }
+
   .row-s {
     @include tablet {
       display: flex;
@@ -36,6 +37,7 @@ $column-base-width: 100% / $columns;
       }
     }
   }
+
   .row-md {
     @include desktop {
       display: flex;

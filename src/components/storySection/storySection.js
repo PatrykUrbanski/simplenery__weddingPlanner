@@ -1,6 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {Contact} from "../contact/contact";
 import {BannerSection} from "../banner/bannerSection";
+import {Link} from "react-router-dom";
 
 export const OurStory = () => {
 
@@ -29,7 +30,7 @@ export const OurStory = () => {
                       <img alt={"couple"} src={"/images/aboutSec-1.jpg"} className={"image"}/>
                       <span className={"deco"}>2019</span>
                       <p className={"description"}>Ab architecto asperiores, eveniet facilis ipsam minima molestias praesentium ratione soluta tempora tenetur. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur cum ea enim et facilis illo ipsum iure magnam neque odio, pariatur perspiciatis placeat praesentium quaerat ratione,
-                          <a href={"#"} className={"card__link"}>sunt velit voluptas voluptatem.</a>
+                          <Link to={"/ourWorks"} className={"card__link"}>Discover our work and let yourself inspire</Link>
                       </p>
                   </div>
               </div>

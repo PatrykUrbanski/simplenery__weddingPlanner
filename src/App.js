@@ -7,20 +7,10 @@ import {LandingTemplate} from "./components/landingTemplate/landingTemplate";
 import {Contact} from "./components/contact/contact";
 import {ScrollToTop} from "./components/router/scrollToTop";
 import {OurWorks} from "./components/worksSection/worksSection";
-import {ProjectDetails} from "./components/worksSection/projectDetails";
 
 export const App = () => {
-    const [loaded, setLoaded] = useState(false);
-
-    useEffect(() => {
-        setTimeout(() => {
-            setLoaded(!loaded)
-        }, 5000);
-    }, []);
-
   return (
       <>
-          {loaded ? <>
               <BrowserRouter>
                   <ScrollToTop />
                   <Header/>
@@ -31,9 +21,6 @@ export const App = () => {
                       <Route path="/contact" component={Contact} />
                   </Switch>
               </BrowserRouter>
-              </>
-          : <LoadingPage /> }
       </>
   )
 };
-

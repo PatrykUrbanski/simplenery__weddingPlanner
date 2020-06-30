@@ -12,12 +12,10 @@ export const Header = () => {
     };
 
     useEffect(() => {
-        const headerHandler = window.addEventListener("scroll", () => {
+        window.addEventListener("scroll", () => {
               window.pageYOffset !== 0 ? setHeaderOnTop(false) : setHeaderOnTop(true)
         })
     }, []);
-
-
 
     return (
         <>

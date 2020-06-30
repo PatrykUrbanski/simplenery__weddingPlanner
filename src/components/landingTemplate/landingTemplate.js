@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {Banner} from "../banner/banner";
 import {About} from "../mainSection/mainSection";
 import {Contact} from "../contact/contact";
